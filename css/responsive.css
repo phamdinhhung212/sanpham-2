@@ -144,8 +144,6 @@
 	#header #search-bar #search-box #search-text-c { 
 		padding: 10px 50px 10px 20px;
 		width: 100%;
-		border: 1px solid #3498db;
-		border-top: 4px solid #3498db;
 	}
 	#header #search-bar { left: 26%; }
 	#header #search-bar #search-box #btn-search { padding: 7px 15px; font-size: 27px; right: 0%; }
@@ -190,11 +188,12 @@
 } 
 @media screen and (max-width: 476px) {
 	#header #respon-right .widget.category-respon ul.list-cate li a { padding: 10px 33px; font-size: 14px;}
+	#back-top span.icon-scroll { width: 45px; height: 45px; font-size: 24px; padding: 6px 0px 0px 10px; opacity: 0.6; }
 }
 @media screen and (max-width: 414px) {
 	#header #respon-right ul#menu-respon li i { right: 75%; }
 	#header #respon-right ul#menu-respon li:hover { padding: 0px 50px; }	
-	#wp-respon #respon-left span#icon-tabbar { right: -21%; }
+	#wp-respon #respon-left span#icon-tabbar { right: -19%; }
 	/*respon right*/
 	#header span#icon-menu { left: 45.5%; }
 	#header #respon-right .widget.category-respon ul.list-cate li a { padding: 10px 23px; font-size: 14px;}
@@ -236,9 +235,9 @@
 	#header .icon-search { right: 20%; }
 	#header #respon-right ul#menu-respon > li i { right: 85%; }
 	#header #respon-right ul#menu-respon > li:hover { padding: 0px 30px; }
-	#wp-respon #respon-left span#icon-tabbar { right: -19%; }
+	#wp-respon #respon-left span#icon-tabbar { right: -17%; }
 	/*sidebar*/
-	#wp-respon #respon-left span#icon-tabbar { right: -10%; }
+	#wp-respon #respon-left span#icon-tabbar { right: -8%; }
 	/*respon right*/
 	#header #respon-right .widget.category-respon ul.list-cate li a { padding: 10px 11px; font-size: 12px; }
 	/*content product main*/
@@ -255,4 +254,10 @@
 	.slide-box { height: 153px; }
 	/*widget category widget-head*/
 	.widget.category .widget-head h2 { font-size: 45px; }
+
+	/*footer*/
+	#footer .line-1 .infor-contact .phone-m-p { float: none; width: 100%; margin-bottom: 30px; }
+	#footer .line-1 .infor-contact .phone-ct-c { float: none; width: 100%; }
+	/*header search-bar*/
+	#header #search-bar { top: 18%; }
 }
