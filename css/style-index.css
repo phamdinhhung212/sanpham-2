@@ -76,13 +76,15 @@ ul#main-menu li a:hover span {
 	padding: 16px 0px;
 }
 #form-search #search-text {
+	font-family: "Quicksand";
+	font-weight: 400;
 	width: 170px;
     padding: 5px 30px 5px 10px;
     font-style: italic;
     font-size: 15px;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
-    color: #95a5a6;
+    color: #353b48;
 }
 #form-search #btn-search {
 	border: none;
@@ -104,9 +106,9 @@ ul#main-menu li a:hover span {
 }
 /*search bar*/
 #header #search-bar {
-    position: absolute;
-    top: 150%;
-    left: 33%;
+    position: fixed;
+    top: 12%;
+    left: 35%;
     z-index: 5;
     display: none;
     width: 40%;
@@ -116,33 +118,39 @@ ul#main-menu li a:hover span {
 	
 }
 #header #search-bar #search-box .close-s {
-	position: absolute;
-	top: -23px;
-	left: 48%;
-	color: #3498db;
-	font-size: 15px;
-	cursor: pointer;
+    position: absolute;
+    top: -23px;
+    left: 48%;
+    color: #525455;
+    font-size: 15px;
+    cursor: pointer;
 }
 #header #search-bar #search-box #search-text-c {
-	/*width: 135%;*/
+	font-family: "Quicksand";
+	font-weight: 300;
+	word-spacing: 4px;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 10px #f00;
 	width: 100%;
-	padding: 15px 80px 15px 20px;
-	border: 2px solid #3498db;
-	border-top: 6px solid #3498db;
+	padding: 15px 80px 15px 50px;
+	border: 2px solid #dcdde1;
 	font-size: 20px;
-	color: #95a5a6;
+	color: #353b48;
 	font-style: italic;
+	background: #dcdde1;
 }
 #header #search-bar #search-box #btn-search {
 	border: none;
-	background: none;
-	color: #3498db;
-	font-size: 30px;
-	padding: 12px 15px;
-	position: absolute;
-	top: 2px;
-	right: 0%;
-	cursor: pointer;
+    background: none;
+    color: #576574;
+    font-size: 25px;
+    padding: 12px 15px;
+    position: absolute;
+    top: 2px;
+    right: 0%;
+    cursor: pointer;
+    opacity: 0.8;
+    font-weight: normal;
 }
 /*--- end style header ---*/
 /*--- style wp-content ---*/
@@ -187,6 +195,17 @@ ul#main-menu li a:hover span {
 	margin: 0px 5px;
 	padding: 8px 8px;
 }
+.list-Utilities span.search {
+	display: block;
+	color: #7f8c8d;
+	float: left;
+	font-size: 20px;
+	margin: 0px 5px;
+	padding: 8px 8px;
+}
+.list-Utilities span.search label {
+	cursor: pointer;
+}
 .list-Utilities a:hover {
 	color: #3498db;
 }
@@ -195,7 +214,7 @@ ul#main-menu li a:hover span {
 	margin-top: 40px;
 }
 .widget.product .widget-title {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 .widget.product .widget-title h2 {
 	font-family: "Satisfy";
@@ -204,27 +223,33 @@ ul#main-menu li a:hover span {
 	text-align: center;
 	color: #7f8c8d;
 }
-#sidebar .widget.product .widget-content {
-	margin-left: 65px;
-}
+/*#sidebar .widget.product .widget-content {
+	margin-left: 50px;
+}*/
 .widget.product .widget-content ul.list-name-product li {
 	position: relative;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.widget.product .widget-content ul.list-name-product li:last-child {
+	border-bottom: none;
 }
 .widget.product .widget-content ul.list-name-product li:after {
 	font-family: "FontAwesome";
     content: "\f004";
     position: absolute;
     top: 25%;
-    left: 0%;
+    left: 8%;
     color: #95a5a6;
     font-size: 10px;
 }
 .widget.product .widget-content ul.list-name-product li a {
 	font-family: "Handlee";
-	font-size: 15px;
+	font-size: 16px;
 	color: #95a5a6;
 	padding: 8px 0px;
-	margin-left: 20px;
+	text-transform: uppercase;
+	padding-left: 22%;
 }
 .widget.product .widget-content ul.list-name-product li:hover a {
 	color: #3498db;
@@ -236,76 +261,33 @@ ul#main-menu li a:hover span {
 	min-height: 650px;
 	padding: 10px 0px 0px 0px;
 }
+#content.opacity-ct {
+	opacity: 0.3;
+}
 /*banner*/
-.slide-box {
-    width: 100%;
-    height: 344px;
-    margin: 0px auto;
-    position: relative;
-    overflow :hidden;
+#content.opacity-ct {
+	opacity: 0.3;
 }
-.list-slide {
-    width: 100%;
-    height: 381px;
-    overflow: hidden;
+/*banner*/
+#banner .slide-box {
+	width: 100%;
+	height: 450px;
 }
-.list-slide .slide img {
-    width: 100%;
-    height: auto;
+#banner .slide-box .list-slide{
+	width: 100%;
+	height: 450px;
+	border: 1px solid #000;
+	overflow: hidden;
+	position: relative;
 }
-.slide {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: -3;
+#banner .slide-box .list-slide .slide {
+	position: absolute;;
+	top: 0px;
+	left: 0px;
 }
-.slide.active {
-    opacity: 1;
-    visibility: visible;
-}
-.btn-slide span {
-    color: #fff;
-    font-size: 40px;
-    opacity: 0.6;
-}
-.btn-slide span.btn-prev-banner {
-    position: absolute;
-    left: 2%;
-    top: 40%;
-    cursor: pointer;
-    z-index: -2;
-}
-.btn-slide span.btn-next-banner {
-    position: absolute;
-    right: 2%;
-    top: 40%;
-    cursor: pointer;
-    z-index: -2;
-}
-.btn-slide ul {
-    position: absolute;
-    z-index: -2;
-    width: 100px;
-    bottom: 20%;
-    left: 50%;
-    margin: -50px;
-    display:flex;
-    justify-content: space-evenly;
-}
-.btn-slide ul li {
-    background: #fff;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    transition: all 0.5;
-    cursor: pointer;
-    opacity: 0.3;
-}
-.btn-slide ul li.active-li {
-    opacity: 1;
+#banner .slide-box .list-slide .slide img {
+	width: 100%;
+	height: auto;
 }
 /* left  */
 .lost-on-left {
@@ -448,6 +430,16 @@ ul.list-product li {
 ul.list-product li:first-child {
 	margin-left: 0.6%;
 }
+ul.list-product li i {
+	position: absolute;
+	top: 2%;
+    left: 5%;
+	color: #ef5777;
+	font-size: 30px;
+	display: none;
+	transition: bottom 0.5s;
+	cursor: pointer;
+}
 ul.list-product li span.discount {
 	position: absolute;
     top: 6%;
@@ -456,13 +448,12 @@ ul.list-product li span.discount {
     color: #f5f5f5;
     font-weight: bold;
 }
-ul.list-product li span.add-basket {
+ul.list-product li span.love-this {
 	font-size: 30px;
-    color: #0097e6;
+    color: #FDA7DF;
     position: absolute;
     top: 2%;
     left: 5%;
-    opacity: 0.6;
     display: none;
     cursor: pointer;
 }
@@ -540,6 +531,9 @@ ul.list-product li .more-product .hide-2 {
     box-shadow: 0 0 6px rgb(209, 31, 53);
     transition: all 0.25s;
 }
+.more-product .hide-2 ul.list-thumb li.active-li {
+	box-shadow: 0 0 6px rgb(209, 31, 53);
+}
 .more-product .hide-2 ul.list-thumb.one-img li:first-child {
 	margin-left: 39%;
 }
@@ -577,6 +571,28 @@ ul.list-product li .more-product .hide-2 {
 }
 /*--------------------*/
 /*--- end style content ---*/
+/*backtop*/
+#back-top span.icon-scroll {
+	opacity: 0.7;
+	width: 50px;
+    height: 50px;
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    padding: 8px 0px 0px 11px;
+    font-size: 26px;
+    position: fixed;
+    top: 30%;
+    right: -18%;
+    transition: right 0.5s;
+    cursor: pointer;
+    z-index: 100;
+}
+#back-top.open-scroll span.icon-scroll {
+	right: 1%;
+	transition: right 0.5s;
+}
 /*--- end style wp-content ---*/
 /*--- end style wrapper ---*/
 /*--- style footer ---*/
@@ -808,6 +824,7 @@ ul.list-product li .more-product .hide-2 {
 }
 /*respon right*/
 #header #respon-right {
+	display: none;
     width: 100%;
     min-height: 221px;
     position: absolute;
@@ -941,23 +958,28 @@ ul.list-product li .more-product .hide-2 {
 }
 /*respon left*/
 #wp-respon #respon-left {
-	width: 270px;
+	width: 290px;
     background: #ecf0f1;
-    min-height: 1000px;
+    height: 100%;
     padding: 10px 10px;
     position: absolute;
     top: 63px;
-    left: -270px;
+    left: -290px;
     transition: left 0.5s;
     z-index: 5;
 }
-#wp-respon #respon-left .widget.product .widget-content {
-	margin-left: 65px;
+#wp-respon #respon-left .scroll-bar {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
 }
+/*.widget.product .widget-content {
+	margin-left: 65px;
+}*/
 #wp-respon #respon-left span#icon-tabbar {
     position: absolute;
     top: 0%;
-    right: -24%;
+    right: -22%;
     font-size: 30px;
     color: #636e72;
     display: none;
